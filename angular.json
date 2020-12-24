@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "AngularEmployeeApp"
+  "defaultProject": "AngularEmployeeApp",
+  "cli": {
+    "analytics": "8d4e2d37-91be-420c-a6d2-503e75f40c75"
+  }
 }
