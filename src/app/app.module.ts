@@ -4,11 +4,17 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DepartmentComponent } from './department/department.component';
-import { ShowDelDepComponent } from './Department/show-del-dep/show-del-dep.component';
-import { AddEditDepComponent } from './Department/add-edit-dep/add-edit-dep.component';
+import { ShowDelDepComponent } from './department/show-del-dep/show-del-dep.component';
+import { AddEditDepComponent } from './department/add-edit-dep/add-edit-dep.component';
 import { EmployeeComponent } from './employee/employee.component';
-import { ShowDelEmpComponent } from './Employee/show-del-emp/show-del-emp.component';
-import { AddEditEmpComponent } from './Employee/add-edit-emp/add-edit-emp.component';
+import { ShowDelEmpComponent } from './employee/show-del-emp/show-del-emp.component';
+import { AddEditEmpComponent } from './employee/add-edit-emp/add-edit-emp.component';
+import { SharedService } from './shared.service';
+
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+
 
 @NgModule({
   declarations: [
@@ -22,9 +28,13 @@ import { AddEditEmpComponent } from './Employee/add-edit-emp/add-edit-emp.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgbModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

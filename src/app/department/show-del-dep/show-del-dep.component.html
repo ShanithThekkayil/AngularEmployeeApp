@@ -1,1 +1,19 @@
-<p>show-del-dep works!</p>
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>DepartmentId</th>
+            <th>Department Name</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let dataitem of DepartmentList">
+            <td>{{dataitem.DepartmentID}}</td>
+            <td>{{dataitem.DepartmentName}}</td>
+            <td>
+                <button class="btn btn-light mr-1" type="button">Edit</button>
+                <button class="btn btn-light mr-1" type="button">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
