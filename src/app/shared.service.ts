@@ -28,7 +28,7 @@ export class SharedService {
   }
 
   getEmployees(val1:any,val2:any):Observable<any[]> {
-    return this.http.get<any>(this.APIUrl + 'Employee/GetEmployees?PageNo='+val1 +'&PageSize='+val2);
+    return this.http.get<any>(this.APIUrl + '/Employee/GetEmployees?PageNo='+val1 +'&PageSize='+val2);
   }
 
   postEmployee(val:any){
